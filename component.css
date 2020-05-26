@@ -197,7 +197,18 @@ h2, p {
   .grid-cards {
     grid-template-columns: repeat(4, 1fr);
   }
-
-
 }
 
+/*
+
+min-width: 300px;
+
+
+min-width: 500px;
+
+
+max-width: 1000
+
+max-width: 700
+
+*/
