@@ -3,9 +3,9 @@
 }
 
 :root {
-  --main-color: #333333;
-  --border-color: #33333333;
-  --background-color: #eee;
+  --main-color: #590902;
+  --border-color: #590902;
+  --background-color: #FCF9F2;
 }
 
 html {
@@ -24,13 +24,15 @@ html {
 body {
   margin: 0;
 
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Neue Haas Unica', Helvetica, sans-serif;
   color: var(--main-color);
 }
 
 h2, p {
   margin: 0;
 }
+
+
 
 /* GRID */
 .grid-cards {
@@ -40,6 +42,7 @@ h2, p {
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
 }
+
 
 @media (max-width: 680px) {
   .grid-cards {
@@ -76,31 +79,66 @@ h2, p {
 .card-title {
   font-size: 2em;
   font-weight: normal;
+  padding-bottom: 10px;
 }
 
 .card-subtitle {
-  text-transform: uppercase;
+  font-style: italic;
+  padding-bottom: 10px;
 }
 
 .card-description {
-
+  max-width: 200px;
+  font-size: 12px;
 }
 
 /* card graphic */
 .card-graphic {
+  flex-grow: 1;
   flex-basis: 20%;
   flex-shrink: 0;
+  text-align: center;
 }
 
 .card-number {
-  font-size: 2em;
+  margin-left: 20px;
+  margin-top: 8px;
+  font-size: 1em;
+  text-align: right;
+}
+
+.img {
+  padding: 10px 0;
 }
 
 .card-symbol {
-
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-auto-rows: 10px;
+  grid-gap: 10px;
+  width: 100px;
 }
 
+.item {
+  background-color: black;
+}
+
+.item:nth-child(1), .item:nth-child(6) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+
+
 @media (max-width: 320px) {
+  html {
+    font-size: 0.5em;
+  }
+
+  img  {
+    width: 100px;
+    height: 100px;
+  }
   .card-graphic {
     display: flex;
     justify-content: space-between;
@@ -112,5 +150,54 @@ h2, p {
   .card-symbol {
     order: -1;
   }
+
+
+}
+
+
+@media (max-width: 640px) {
+  .grid-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-title,
+  .card-number {
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+
+  .card-subtitle {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  .card-description {
+    font-size: 10px;
+    max-width: 100%;
+  }
+
+  body {
+    background-color: var(--main-color);
+  }
+
+  .card-symbol {
+    grid-auto-rows: 5px;
+    grid-gap: 5px;
+    width: 50px;
+  }
+
+}
+
+@media (min-width: 960px) {
+  .grid-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+
 }
 

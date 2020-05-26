@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* repeat(2, 1fr) */
+  grid-auto-rows: 10px;
+  grid-gap: 10px;
+  width: 100px;
+}
+
+.item {
+  background-color: black;
+}
+
+.item:nth-child(1), .item:nth-child(6) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

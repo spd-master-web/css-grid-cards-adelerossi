@@ -1,7 +1,7 @@
 # An exercise in responsive and adaptive layout.
 
 Todo list:
-- Style the card
+- Style the card 
   - Line height
   - Spacing
   - Typographic hirarchy
@@ -9,3 +9,7 @@ Todo list:
 - Code the Ching symbol ( 6 lines, starting from the bottom)
 - Adapt the grid for bigger screens
 
+---> create 2 components using: 
+costums properties
+transitions
+transforms
